@@ -8,11 +8,20 @@ var btnTranslate = document.querySelector("#translate");
 var txt = document.querySelector("#inputTxt");
 var outputDiv = document.querySelector("#output")
 
+var serverURL = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
+
+function getTranslateURL(text){
+    return serverURL + "?" +"text=" + text
+
+}
+
 function clickHandler(){
-    // document.body.style.backgroundColor = "blue";
-    console.log(txt.value);
+    
     console.log("button is clicked");
-    outputDiv.innerText =  txt.value;
+    var inputTxt = txt.value
+    fetch(getTranslateURL(inputTxt))
+    .then(response => response.json())
+    .then(json => console.log(json.contents.translated))
 }
 
 btnTranslate.addEventListener("click", clickHandler)
