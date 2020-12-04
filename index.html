@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>TheBananaTalk</title>
-    <style>
-        textarea{
-            padding: 2rem;
-            margin: 2rem;
-        }
-    </style>
     </head>
 <body>
-    <h1> TheBananaTalk </h1>
-    <textarea id="inputTxt"></textarea>
-
-
+    <header class="head">
+    <h1 class="heading"> The Banana Talk </h1>
+</header>
+<br><br>
+<div class="container container-center">
+    <textarea placeholder="Enter  your  text  in  English !!!" id="inputTxt" ></textarea>
     <button id="translate">Translate</button>
-    <div><h1>Output will come here</h1></div>
+    <br>
+    <br>
     <div id="output">
-        <p></p>
+        <small style="color: grey;"> Your answer will appear here!</small>
     </div>
+    <br>
+</div>
+<br>
+<br>
+<footer class="footer">
+<h1>About</h1>
+<p class="footer-para">The Minions are small, yellow, cylindrical creatures, who have one or two eyes. <br> They are the signature characters of the Despicable Me series. <br> They bring much of the comedy in the film, and they are known as the scene-stealer of the movie. <br>They are globally known for there cuteness and unique language </p>
+
+
+</footer>
+
     <script src="app.js" type="text/javascript"></script>
 </body>
 </html>
